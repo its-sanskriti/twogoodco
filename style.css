@@ -1,0 +1,314 @@
+*{
+   margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+body{
+    background-color: #F7F7F7;
+}
+*::selection{
+    color: #fff;
+    background-color: black;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    /* height: 100px; */
+    width: 100%;
+    /* background-color: burlywood; */
+    position: fixed;
+    z-index: 99;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav-part1 {
+    /* background-color: red; */
+    height: 85px;
+    overflow: hidden;
+
+    
+}
+#nav-part1 svg{
+    display: block;
+}
+#nav #nav-part2{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 40px;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+text-decoration: none;
+color: #333;
+font-weight: 400;
+margin: 20px;
+}
+#links{
+    padding:10px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fff;
+}
+#nav-part2 #icons i{
+    font-size: 18px;
+    margin: 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    position: fixed;
+    transform: translate(-50%,-50%)scale(0);
+}
+#page1{
+    min-height: 100vh;
+    position: relative;
+    width:100%;
+    padding: 0 3vw;
+    padding-top: 18vh;
+}
+
+#page1 h1{
+    font-size: 14vw;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 13vw;
+    letter-spacing: -8px;
+    
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    margin-top: 3vw;
+    position: relatives;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-container #play{
+    padding: 3vw 2.3vw;
+    background-color: black;
+    color: #fff;
+    font-size: 1.5vw;
+    position: fixed;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2{
+    min-height: 100vh;
+    width:100%;
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 2.5vw;
+    justify-content: space-between;
+
+}
+#page2 .elem{
+    height: 100%;
+    width: 31%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+}
+.elem .dets{
+    height: 60px;
+    border-radius: 50px;
+    width: 70%;
+    width: 80%;
+    position: absolute;
+    z-index: 9;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+background-color: palegoldenrod;
+}
+.elem .dets:hover{
+    height: 200px;
+}
+#page3{
+   min-height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+}
+ .child{
+    height: 55vh;
+    width: 40vw;
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.child img{
+    height: 100%;
+}
+@media (max-width:600px){
+
+    #page1{
+        min-height: 70vh;
+        width:100%;
+        padding: 0 3vw;
+        padding-top: 30vh;
+    }
+    #page1 h1{
+        font-size: 14vw;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 13vw;
+        letter-spacing: -3px;
+        
+    }
+    #video-container{
+        height: 35vh;
+        margin-top: 3vw;
+    }
+    #video-container #play{
+        padding: 8vw 5.5vw;
+        background-color: black;
+        color: #fff;
+        font-size: 4.5vw;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        text-transform: uppercase;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+    #page2{
+        min-height: 100vh;
+        width:100%;
+        /* background-color: blue; */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 3vw;
+        
+    
+    }
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        /* background-color: red; */
+        overflow: hidden;
+        margin-bottom:3vw ;
+        
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1.1;
+    }
+    #page3{
+        min-height: 120vh;
+         width: 100%;
+         position: relative;
+         display: flex;
+         align-items:center;
+         justify-content: space-evenly;
+         flex-wrap:wrap;
+     }
+      .child{
+         height: 55vh;
+         width: 80vw;
+         /* background-color: red; */
+         position: relative;
+         padding: 15vw;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     .child img{
+         height: 100%;
+     }
+     #nav{
+        /* height: 100px; */
+        width: 100%;
+        /* background-color: burlywood; */
+        position: fixed;
+        z-index: 99;
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #nav-part1 {
+        /* background-color: red; */
+        height: 65px;
+        overflow: hidden;
+    
+    }
+    #nav-part1 svg{
+        display: block;
+        height: 64px;
+        width: 60px;
+    }
+    #nav #twogoodlogo{
+        height: 39px;
+        margin-left: -10px;
+    }
+    #nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    }
+    #nav-part2 #links a{
+        text-transform: uppercase;
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    margin: 20px;
+    }
+    #links{
+        padding:10px;
+        display: none;
+    }
+    #icons{
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #fff;
+    }
+    #nav-part2 #icons i{
+        font-size: 15px;
+        margin: 20px;
+        font-weight: 100;
+    }
+    
+}
